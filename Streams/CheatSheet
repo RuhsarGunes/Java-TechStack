@@ -1,0 +1,26 @@
+Java streams bring functional programming to Java, and supported starting in Java 8.
+
+Advantages of Streams:
+  1- Will make you more efficent Java programmer.
+  2- Make heavy use of lambda expressions.
+  3- ParallelStreams make it very easy to multi-thread operations.
+
+Stream source: Streams can be created from Collections, Lists, Sets, ints, longs, doubles, arrays, lines of file.
+
+Stream operations:
+
+1- Intermediate operations: such as filter, map, or sort return a stream so we can chain multiple intermediate operations. 
+
+Zero or more intermediate operations are allowed. Order matters for large datasets: filter first, then sort, or map. 
+For very large datasets use ParallelStream to enable multiple threads.
+
+Intermediate operations: anyMatch(), distinct(), filter(), findFirst(),  flatmap(), map(), skip(), sorted()
+
+2- Terminal operations: such as forEach, collect, or reduce are either void or return a non-stream result.
+
+One terminal operation is allowed.
+forEach applies the same function to each element.
+collect saves the elements into a collection.
+other options reduce the stream to a single summary element.
+
+count(), max(), min(), reduce(), summaryStatistics()
